@@ -56,9 +56,10 @@ class MarkovMachine(object):
         return text[:140]
 
 
-if __name__ == "__main__":
+def tweet():
+
     filenames = sys.argv[1:]
 
     generator = MarkovMachine()
     generator.read_files(filenames)
-    print generator.make_text()
+    return generator.make_text()
